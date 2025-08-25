@@ -1,9 +1,17 @@
-import React from 'react'
+import { useState } from 'react';
+import NoteForm from './components/NoteForm';
+import NotesList from './components/NotesList';
 
 const App = () => {
-  return (
-    <div>App</div>
-  )
-}
+  const [notes, setNotes] = useState([]);
 
-export default App
+  return (
+    <div className='max-w-lg mx-auto mt-10 p-6 bg-gray-100 rounded-lg shadow-lg'>
+      <h2 className='text-2xl font-bold text-center'>📝 Notes App</h2>
+      <NoteForm notes={notes} setNotes={setNotes} />
+      <NotesList notes={notes} />
+    </div>
+  );
+};
+
+export default App;
