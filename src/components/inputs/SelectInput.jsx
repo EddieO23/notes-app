@@ -6,7 +6,7 @@ function SelectInput({ label, name, value, onChange, options, required }) {
       </label>
       <select
         name={name}
-        onChange={handleChange}
+        onChange={onChange}
         value={value}
         className='w-full p-2 border rounded-lg'
       >
